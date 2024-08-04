@@ -185,6 +185,8 @@ Go to **Storage Accounts** ➜ and select our ```sacyberlab009``` Storage Accoun
 
 On the left side under **Monitoring** ➜ select the **Diagnostic settings** blade
 
+For the **"blob"** line ➜ click on ⛔ **Disabled** under **"Diagnostic status"** for the 
+
 <br>
 
 ![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
