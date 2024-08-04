@@ -6,7 +6,7 @@
 
 <h2 align="center">Tenant, Subscription & Resource Level Logging</h2>
 
-![Banner](https://github.com/user-attachments/assets/aed12083-4d26-499f-80b5-8a9e1db584f7)
+![Banner](https://github.com/user-attachments/assets/39d59344-9d47-4be6-aba0-7ba2ead7efba)
 
 <br />
 
