@@ -16,41 +16,45 @@
 <summary> <h2>1️⃣ Tenant Level Logging ➜ Microsoft Entra ID</h2> </summary>
 <br>
   
-Create **Diagnostic Settings** in **Microsoft Entra ID**.
-
-This will allow us to **Ingest Logs** into our **Log Analytics Workspace**.
-
-<br>
-
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+> The first thing we're going to do is create a **Diagnostic Setting** in **Microsoft Entra ID**.
+> 
+> This will allow us to **Ingest Logs** into our **Log Analytics Workspace**.
 
 <br>
 
-We'll create a **New User**:
+- Choose a **"Diagnostic setting name"** ➜ I picked ```ADD-Logs```
+
+- Under **Logs** ➜ **Category groups** ➜ select ☑️ **AuditLogs**,  ☑️ **SigninLogs** and ☑️ **NonInteractiveUserSigninLogs**
+
+- Make sure we're sending the Logs to our **Log Analytics Workspace** ```LAW-Cyber-Lab```
+
+Click **Save**
+
+<br>
+
+![azure portal](https://github.com/user-attachments/assets/ed64370f-008f-4711-8e7d-25401d8a29a8)
+
+<br>
+
+Next we'll create a **New User**:
 
 - We can Name it ```Lain```
+
 - Copy and Save the **Auto-generated Password**
-- Click **"Review + create"** to Create the New User:
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/b4c7d057-a52c-4dee-bcd5-79111a5f44d6)
 
 <br>
 
-Assign the **Global Administrator Role** to the New User.
+Go to the **Assignments** tab ➜ click on ➕ **Add role** ➜ assign the **Global Administrator** role to the New User.
 
->   <details close> 
->   
-> **<summary> 💡 Note</summary>**
-> 
-> We can go back to our **Log Analytics Workspace** to confirm that **Logs are Properly Being Ingested**.
-> 
->   </details>
+Click **"Review + create"** to Create the New User:
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/3e824ba8-8383-441b-9419-346b8bfab7a2)
 
 <br>
 
@@ -64,7 +68,15 @@ We'll now create another **New User** ➜ this is going to be our **"Attacker" U
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/b5025517-7ef9-4705-b200-5ced4626b52c)
+
+<br>
+
+<h2></h2>
+
+<br>
+
+We can go back to our **Log Analytics Workspace** to confirm that **Logs are Properly Being Ingested**.
 
 <br>
 
@@ -84,7 +96,7 @@ We'll now create another **New User** ➜ this is going to be our **"Attacker" U
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/0768f8c7-814f-417a-a249-b3d684091d33)
 
 <br>
 
@@ -92,7 +104,7 @@ We'll now create another **New User** ➜ this is going to be our **"Attacker" U
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/cb258735-8498-4926-955c-397cdd31f603)
 
 <br>
 
@@ -110,15 +122,15 @@ Go to **Azure Monitor** ➜ then the **Activity Log** blade ➜ and click on ⚙
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/bf87437a-ba52-4a1e-9ca1-4856940e053f)
 
 <br>
 
-We'll then create a new **Diagnostic Setting**:
+We'll then create a new **Diagnostic Setting** ➜ I named mine ```ds-activity-logs```:
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/d4c4cc49-71f8-4ab9-85d9-942d80a8c289)
 
 <br>
 
@@ -131,11 +143,11 @@ To do so I decided to:
 
 <br>
 
-### Signin Logs:
+### New Resource Groups:
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/c1273b17-0839-4d9a-b87c-a50b3db2554b)
 
 <br>
 
@@ -143,7 +155,7 @@ To do so I decided to:
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/5d18fe9e-f39b-41a8-8665-1506fbd81758)
 
 <br>
 
@@ -153,7 +165,7 @@ Back to our **Log Analytics Workspace** ➜ I **Queried the Logs** for any **Cha
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/1f7885d3-13bf-454c-8d8d-4a9e6d229666)
 
 <br>
 
@@ -161,7 +173,7 @@ I also performed another **Query for Checking Resource Group Deletion** in our L
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/26ca75bd-e180-4e8b-9f95-858145bb805b)
 
 <br>
 
@@ -189,7 +201,7 @@ For the **"blob"** line ➜ click on ⛔ **Disabled** under **"Diagnostic status
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/14c169a9-f7cc-4c4e-8c0e-23e6f7898c9e)
 
 <br>
 
@@ -197,11 +209,11 @@ Click on ➕ **Add Diagnostic setting**
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/9ad6d6eb-6fcd-4208-90c6-c2f9308ad88d)
 
 <br>
 
-- Create a **"Diagnostic setting name"** ➜ I picked ```ds-storage-acct```
+- Set up a **"Diagnostic setting name"** ➜ I picked ```ds-storage-acct```
 
 - Under **Logs** ➜ **Category groups** ➜ select ☑️ **audit**
 
@@ -211,7 +223,7 @@ Click **Save**
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/6750ea6a-f1b8-46b5-81c2-c16358ecf292)
 
 <br>
 
@@ -229,25 +241,29 @@ Navigate to **Azure Key Vault** ➜ click on **"Create a Key Vault"**.
 
 Also ➜ the **"Key vault name"** must be Globally Unique.
 
-<br>
-
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+Click the **"Next"** button:
 
 <br>
 
-Once the Key Vault is configured properly ➜ click on **"Review + Create"**.
+![azure portal](https://github.com/user-attachments/assets/0928b8a2-16e2-4e10-8598-2870b2f30635)
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+Under the **"Access configuration"** tab ➜ set the **"Permission model"** to ◉ **Vault access policy**
+
+Click on **"Review + Create"**.
 
 <br>
 
-We'll the create a **Diagnostic Setting** for the **Key Vaul**t the same way we did for the **Storage Account**.
+![azure portal](https://github.com/user-attachments/assets/5e84b87f-728d-498b-8ea0-e1d02b71f406)
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+We'll then create a **Diagnostic Setting** for the **Key Vault** ➜ the same way we did for the **Storage Account**.
+
+<br>
+
+![azure portal](https://github.com/user-attachments/assets/463cc82f-4806-4c1f-9103-051ab84689f8)
 
 <br>
 
@@ -261,7 +277,7 @@ Click **Save**
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/358c763b-3b13-49ae-be30-ae40384df755)
 
 <br>
 
@@ -283,7 +299,7 @@ We're then going to **Query those Logs** and analyse them inside of our LAW.
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/677d2a01-7249-4784-ba4d-14ec206b7014)
 
 <br>
 
@@ -291,7 +307,7 @@ We're then going to **Query those Logs** and analyse them inside of our LAW.
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/93575473-1b10-46a3-8b71-ed3eb61897d3)
 
 <br>
 
@@ -299,7 +315,7 @@ Inside of our ```ak-cyber-lab``` **Key Vault** ➜ we can confirm that both Secr
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/c03626dd-4df1-4c3a-99fe-ce8dbb007f83)
 
 <br>
 
@@ -307,7 +323,7 @@ So we'll then Query our ```LAW-Cyber-Lab``` ➜ to make sure **Logs are Flowing 
 
 <br>
 
-![azure portal](https://github.com/user-attachments/assets/6212a9be-938b-4627-a5f9-c5a50891b90f)
+![azure portal](https://github.com/user-attachments/assets/8a1c02ff-e3b8-48a0-ae37-b69d648bae25)
 
 <br>
 
