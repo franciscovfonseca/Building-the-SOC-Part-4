@@ -13,12 +13,12 @@
 <br />
 
 <details close> 
-<summary> <h2>1️⃣ Tenant Level Logging</h2> </summary>
+<summary> <h2>1️⃣ Tenant Level Logging ➜ Microsoft Entra ID</h2> </summary>
 <br>
   
-Create **Diagnostic Settings** in Microsoft Entra ID.
+Create **Diagnostic Settings** in **Microsoft Entra ID**.
 
-This will allow us to Ingest Logs into our Log Analytics Workspace.
+This will allow us to **Ingest Logs** into our **Log Analytics Workspace**.
 
 <br>
 
@@ -101,7 +101,7 @@ We'll now create another **New User** ➜ this is going to be our **"Attacker" U
 <h2></h2>
 
 <details close> 
-<summary> <h2>2️⃣ Subscription Level Logging</h2> </summary>
+<summary> <h2>2️⃣ Subscription Level Logging ➜ Activity Log</h2> </summary>
 <br>
 
 We're now going to export the **Azure Activity Logs** to our **Log Analytics Workspace**.
@@ -170,7 +170,7 @@ I also performed another **Query for Checking Resource Group Deletion** in our L
 <h2></h2>
 
 <details close> 
-<summary> <h2>3️⃣ Resource Level Logging (Data Plane Logs)</h2> </summary>
+<summary> <h2>3️⃣ Resource Level Logging ➜ Azure Storge Account & Azure Key Vault</h2> </summary>
 <br>
 
 The next step is to Enable Logs for our Storage account and for our Key Vault.
