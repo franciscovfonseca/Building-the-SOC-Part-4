@@ -6,11 +6,11 @@
 
 <h2 align="center">Tenant, Subscription & Resource Level Logging</h2>
 
-![Banner](https://github.com/user-attachments/assets/39d59344-9d47-4be6-aba0-7ba2ead7efba)
-
+<p align="center">
+<img width="800" src="https://github.com/user-attachments/assets/39d59344-9d47-4be6-aba0-7ba2ead7efba" alt="Banner"/>
+<br />
 <br />
 
-<br />
 
 <details close> 
 <summary> <h2>1️⃣ Tenant Level Logging ➜ Microsoft Entra ID</h2> </summary>
